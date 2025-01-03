@@ -42,48 +42,59 @@
                     <div class="row gx-5 align-items-center">
                         <div class="col-xxl-5">
                             <!-- Header text content-->
-                            <div class="text-center text-xxl-start">
-                                <div class="fs-3 fw-light text-muted">Enjoy free storage drive (1GB)</div>
-                                <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">JaviDrive</span></h1>
-                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-
-                                    <form action="files_list.php">
-                                        <button class="javier_button" style="background-color:rgb(133, 19, 179);">List of Files</button>
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xxl-7" style="text-align: center;">
-
-                            <!-- Formulario para subir el archivo -->
-                            <script>
-                                function mostrarBoton() {
-                                    document.getElementById('barra').style.display = 'inline-block';
-                                }
-                            </script>
-
-                            <form id="formulario" action="php/subir_archivo.php" method="POST" enctype="multipart/form-data">
-                                <label for="archivo">Select a File:</label>
-                                <br>
-                                <input type="file" name="archivo" id="archivo" required>
-                                <br><br>
-                                <input onclick="mostrarBoton()" type="submit" value="Upload" class="javier_button" >
-                            </form>
-                        
-                             <!-- Contenedor de la barra y el porcentaje -->
-                             <div id="barra" class="contenedor-progreso" style="display: none;">
-                                <div id="barra-de-progreso">
-                                    <div id="progreso"></div>
-                                </div>
-                                <div id="porcentaje">0%</div> <!-- Porcentaje a la derecha de la barra -->
-                            </div>
+                            
                              
                             
                         </div>
                     </div>
                 </div>
             </header>
+
+            
+                <div style="text-align: center;">
+                    <div class="fs-3 fw-light text-muted">Enjoy free storage drive (1GB)</div>
+                    <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">JaviDrive</span></h1>
+                    
+                    <form action="files_list.php">
+                        <button class="javier_button" style="background-color:rgb(133, 19, 179);">List of Files</button>
+                    </form>
+
+                    <script>
+                        function mostrarBoton() {
+                            document.getElementById('barra').style.display = 'inline-block';
+                        }
+                    </script>
+
+                    <form id="formulario" action="php/subir_archivo.php" method="POST" enctype="multipart/form-data">
+                        <label for="archivo">Select a File:</label>
+                        <br>
+                        <input type="file" name="archivo" id="archivo" required>
+                        <br><br>
+                        <input onclick="mostrarBoton()" type="submit" value="Upload" class="javier_button" >
+                    </form>
+
+                    <br>
+                
+                     <!-- Contenedor de la barra y el porcentaje -->
+                    <div style="margin-left: 5%; margin-right: 5%;">
+                     <div id="barra" class="contenedor-progreso" style="display:none;">
+                        <div id="barra-de-progreso">
+                            <div id="progreso"></div>
+                        </div>
+                        <div id="porcentaje" style="font-size: 16px;">0%</div> <!-- Porcentaje a la derecha de la barra -->
+                    </div>
+                     </div>
+
+
+
+                </div>
+
+                
+                
+            
+            
+
+            
             <!-- About Section-->
             <section class="bg-light py-5">
                 <div class="container px-5">
