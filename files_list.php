@@ -46,40 +46,22 @@
                                 <div class="fs-3 fw-light text-muted">Enjoy free storage drive (1GB)</div>
                                 <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">JaviDrive</span></h1>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-
-                                    <form action="files_list.php">
-                                        <button class="javier_button" style="background-color:rgb(133, 19, 179);">List of Files</button>
-                                    </form>
+                                    
+                                <form action="upload.html">
+                                        <button class="javier_button" style="background-color:rgb(52, 23, 158);" onclick="windows.location.href='upload.html;'">Upload a File</button>                             
+                                </form>
 
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-7" style="text-align: center;">
+                        <div class="col-xxl-7">
 
-                            <!-- Formulario para subir el archivo -->
-                            <script>
-                                function mostrarBoton() {
-                                    document.getElementById('barra').style.display = 'inline-block';
-                                }
-                            </script>
-
-                            <form id="formulario" action="php/subir_archivo.php" method="POST" enctype="multipart/form-data">
-                                <label for="archivo">Select a File:</label>
+                            <div style="text-align: center;">
+                                <?php include 'php/listar_archivos.php'; ?>
                                 <br>
-                                <input type="file" name="archivo" id="archivo" required>
-                                <br><br>
-                                <input onclick="mostrarBoton()" type="submit" value="Upload" class="javier_button" >
-                            </form>
-                        
-                             <!-- Contenedor de la barra y el porcentaje -->
-                             <div id="barra" class="contenedor-progreso" style="display: none;">
-                                <div id="barra-de-progreso">
-                                    <div id="progreso"></div>
-                                </div>
-                                <div id="porcentaje">0%</div> <!-- Porcentaje a la derecha de la barra -->
+                                <?php include 'php/calcular_tamanio_carpeta.php'; ?>      
                             </div>
-                             
-                            
+                                
                         </div>
                     </div>
                 </div>
@@ -123,6 +105,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <script src="js/script_javidrive.js"></script>
     </body>
 </html>
