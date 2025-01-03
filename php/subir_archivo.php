@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['archivo'])) {
     $tamanioArchivo = $archivo['size'];
     
     // Ruta de la carpeta donde se guardará el archivo
-    $carpetaDestino = 'archivos/';
+    $carpetaDestino = '../archivos/';
     
     // Comprobamos si hay errores en la carga
     if ($errorArchivo !== UPLOAD_ERR_OK) {
