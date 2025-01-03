@@ -33,11 +33,19 @@
     color: #000000;
 }
 
-.upload_button {
+.javier_button {
 background-color: green;
 color: white;
 border-radius: 5px;
 border: 0px;
-width: 120px;
-height: 40px;
+width: 140px;
+height: 50px;
 }
+.javier_button:hover 
+{
+    filter: brightness(1.20); /* Reduce el brillo al 70% para oscurecer */
+}
+.javier_button:active
+{
+    filter: brightness(0.85); /* Reduce el brillo al 70% para oscurecer */
+} 
